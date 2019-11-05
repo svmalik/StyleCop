@@ -202,6 +202,7 @@ namespace StyleCop.CSharp
                 case OperatorType.LeftShiftEquals:
                 case OperatorType.RightShiftEquals:
                 case OperatorType.ModEquals:
+                case OperatorType.NullCoalescingAssignment:
                     precedence = ExpressionPrecedence.Assignment;
                     break;
 
@@ -1153,6 +1154,10 @@ namespace StyleCop.CSharp
 
                     case OperatorType.RightShiftEquals:
                         type = AssignmentExpression.Operator.RightShiftEquals;
+                        break;
+
+                    case OperatorType.NullCoalescingAssignment:
+                        type = AssignmentExpression.Operator.NullCoalescingAssignment;
                         break;
 
                     default:
@@ -5787,7 +5792,8 @@ namespace StyleCop.CSharp
                     || symbol.SymbolType == SymbolType.Multiplication || symbol.SymbolType == SymbolType.Division || symbol.SymbolType == SymbolType.LeftShift
                     || symbol.SymbolType == SymbolType.RightShift || symbol.SymbolType == SymbolType.Mod || symbol.SymbolType == SymbolType.Tilde
                     || symbol.SymbolType == SymbolType.Case || symbol.SymbolType == SymbolType.QuestionMark || symbol.SymbolType == SymbolType.Colon
-                    || symbol.SymbolType == SymbolType.NullCoalescingSymbol || symbol.SymbolType == SymbolType.Comma || symbol.SymbolType == SymbolType.Semicolon
+                    || symbol.SymbolType == SymbolType.NullCoalescingSymbol || symbol.SymbolType == SymbolType.NullCoalescingAssignment
+                    || symbol.SymbolType == SymbolType.Comma || symbol.SymbolType == SymbolType.Semicolon
                     || symbol.SymbolType == SymbolType.Return || symbol.SymbolType == SymbolType.Throw || symbol.SymbolType == SymbolType.Else || symbol.SymbolType == SymbolType.NullConditional
                     || symbol.SymbolType == SymbolType.Lambda || (symbol.SymbolType == SymbolType.Other && symbol.Text == "await") || symbol.Text == "select")
                 {

@@ -243,6 +243,11 @@ namespace StyleCop.CSharp
         NullCoalescingSymbol, 
 
         /// <summary>
+        /// A null coalescing assignment: '??='.
+        /// </summary>
+        NullCoalescingAssignment,
+
+        /// <summary>
         /// A comma: ','.
         /// </summary>
         Comma, 

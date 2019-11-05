@@ -2151,6 +2151,13 @@ namespace StyleCop.CSharp
                     text.Append("?");
                     type = SymbolType.NullCoalescingSymbol;
                     this.codeReader.ReadNext();
+                    character = this.codeReader.Peek();
+                    if (character == '=')
+                    {
+                        text.Append(character);
+                        type = SymbolType.NullCoalescingAssignment;
+                        this.codeReader.ReadNext();
+                    }
                 }
                 else if (character == '.')
                 {

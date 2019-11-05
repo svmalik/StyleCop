@@ -114,6 +114,10 @@ namespace StyleCop.CSharp
                     type = OperatorType.NullCoalescingSymbol;
                     category = OperatorCategory.Logical;
                     break;
+                case SymbolType.NullCoalescingAssignment:
+                    type = OperatorType.NullCoalescingAssignment;
+                    category = OperatorCategory.Assignment;
+                    break;
                 case SymbolType.Equals:
                     type = OperatorType.Equals;
                     category = OperatorCategory.Assignment;
@@ -308,6 +312,8 @@ namespace StyleCop.CSharp
                     return SymbolType.ConditionalOr;
                 case OperatorType.NullCoalescingSymbol:
                     return SymbolType.NullCoalescingSymbol;
+                case OperatorType.NullCoalescingAssignment:
+                    return SymbolType.NullCoalescingAssignment;
                 case OperatorType.Equals:
                     return SymbolType.Equals;
                 case OperatorType.PlusEquals:

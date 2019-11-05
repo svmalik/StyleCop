@@ -142,7 +142,12 @@ namespace StyleCop.CSharp
             /// <summary>
             /// The right-shift equals operator.
             /// </summary>
-            RightShiftEquals
+            RightShiftEquals,
+
+            /// <summary>
+            /// Null coalescing assignment operator.
+            /// </summary>
+            NullCoalescingAssignment
         }
 
         #endregion

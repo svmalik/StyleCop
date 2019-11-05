@@ -87,7 +87,7 @@ namespace StyleCop.CSharp
         /// <summary>
         /// A null coalescing symbol: '??'.
         /// </summary>
-        NullCoalescingSymbol, 
+        NullCoalescingSymbol,
 
         #endregion Logical Operators
 
@@ -142,6 +142,11 @@ namespace StyleCop.CSharp
         /// An XOR equals symbol: '^='.
         /// </summary>
         XorEquals, 
+
+        /// <summary>
+        /// A null coalescing assignment symbol: '??='.
+        /// </summary>
+        NullCoalescingAssignment,
 
         #endregion Assignment Operators
 

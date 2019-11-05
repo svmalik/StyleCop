@@ -341,7 +341,18 @@
               </Expression>
             </Statement>
           </Element>
-        </Element>
+            <Element Name="boo" Type="Method">
+              <Statement Type="ReturnStatement">
+                <Expression Type="AssignmentExpression">
+                  <Expression Type="MemberAccessExpression">
+                    <Expression Text="this" Type="LiteralExpression" />
+                    <Expression Text="singleBitValue" Type="LiteralExpression" />
+                  </Expression>
+                  <Expression Text="false" Type="LiteralExpression" />
+                </Expression>
+              </Statement>
+            </Element>
+          </Element>
         <Element Name="MyTest" Type="Class">
           <Element Name="Invoke" Type="Method">
             <Statement Type="ReturnStatement">

@@ -66,6 +66,11 @@ namespace CSharpParserTest.TestData
                 this.singleBitValue = obj as bool? ?? false;
                 return true ? true : false;
             }
+
+            public bool boo()
+            {
+                return this.singleBitValue ??= false;
+            }
         }
 
         public class MyTest
